@@ -20,7 +20,7 @@ public final class LobbyCommand {
                             proxy.getServer("lobby").ifPresent(registeredServer -> {
                                 player.getCurrentServer().ifPresent(serverConnection -> {
                                     if (registeredServer == serverConnection.getServer()) {
-                                        source.sendMessage(Component.text("[§6§lRaudonisNetwork§r]§4 You are already connected to the lobby!"));
+                                        source.sendMessage(Component.text("[§6§lRaudonisNetwork§r]§c You are already connected to the lobby!"));
                                     } else {
                                         source.sendMessage(Component.text("[§6§lRaudonisNetwork§r] Sending you to lobby..."));
                                         player.createConnectionRequest(registeredServer).fireAndForget();
